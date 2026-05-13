@@ -1,0 +1,82 @@
+:root {
+    --color-primary: #f57c00;
+    --color-success: #ff9800;
+    --color-error: #d32f2f;
+    --bg-color: #fff3e0;
+    --font-color: #333;
+    --button-hover: #fb8c00;
+    --button-active: #ef6c00;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+    color: #e65100;
+}
+
+.tab {
+    border-bottom: 2px solid #ffcc80;
+}
+
+.tab.active {
+    background-color: #ff9800;
+    color: white;
+    border-color: #f57c00;
+}
+
+.card {
+    background: white;
+    border-left: 4px solid #ff9800;
+}
+
+.button {
+    border-radius: 4px;
+}
+
+.button.primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.button.primary:hover {
+    background-color: var(--button-hover);
+}
+
+.button.success {
+    background-color: var(--color-success);
+    border-color: #fb8c00;
+}
+
+.button.success:hover {
+    background-color: #fb8c00;
+}
+
+.button.error {
+    background-color: var(--color-error);
+    border-color: #b71c1c;
+}
+
+input {
+    border: 1px solid #ffcc80;
+}
+
+input:focus {
+    border-color: #ff9800;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #ffcc80;
+}
+
+.text-error {
+    color: var(--color-error);
+}
+
+.is-center {
+    text-align: center;
+}

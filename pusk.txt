@@ -1,0 +1,7 @@
+koren/: http-server --ssl --cert localhost+2.pem --key localhost+2-key.pem -p 3000
+
+вапид-ключи
+публичный
+BKJmhQeqS04WzlWIkFd9Ba4s-GDxrVVeuHmHInzCUzYHrRRktAFp9ygIaX5aSX4NW-6Cn2ViGB8NrmrS6jfOB-c
+приватный
+MXEq70XU6NHTiGr5OTA2m9ZqU2_cdVdF1uZkq812LsU
