@@ -69,19 +69,6 @@ io.on('connection', (socket) => {
     });
 });
 
-io.on('taskAdded', (task) => {
-    console.log('Задача от другого клиента:', task);
-    const notification = document.createElement('div');
-    notification.textContent = `Новая задача: ${task.text}`;
-    notification.style.cssText = `
-        position: fixed; top: 10px; right: 10px;
-        background: #4285f4; color: white; padding: 1rem;
-        border-radius: 5px; z-index: 1000;
-        `;
-    document.body.appendChild(notification);
-    setTimeout(() => notification.remove(), 3000);
-});
-
 app.post('/subscribe', (req, res) => {
     subscriptions.push(req.body);
     res.status(201).json({ message: 'Подписка сохранена!' });

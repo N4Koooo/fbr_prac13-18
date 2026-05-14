@@ -100,6 +100,19 @@ function initNotes() {
     loadNotes();
 }
 
+socket.on('taskAdded', (task) => {
+    console.log('Задача от другого клиента:', task);
+    const notification = document.createElement('div');
+    notification.textContent = `Новая задача: ${task.text}`;
+    notification.style.cssText = `
+        position: fixed; top: 10px; right: 10px;
+        background: #4285f4; color: white; padding: 1rem;
+        border-radius: 5px; z-index: 1000;
+        `;
+    document.body.appendChild(notification);
+    setTimeout(() => notification.remove(), 3000);
+});
+
 function urlBase64ToUint8Array(base64String) {
     const padding = '='.repeat((4 - base64String.length % 4) % 4);
     const base64 = (base64String + padding).replace(/\-/g, '+').replace(/_/g, '/');
